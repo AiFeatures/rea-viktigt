@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [main, "release/*"]
   schedule:
-    - cron: "23 0-2,4-23 * * *"
+    # One forced full qualification per day at a low-traffic, off-the-hour minute.
     - cron: "23 3 * * *"
   workflow_dispatch:
   workflow_call:
